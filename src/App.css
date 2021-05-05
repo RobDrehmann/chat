@@ -1,18 +1,23 @@
-h1 {
-  color: #0b93f6;
-  font-family: verdana;
-  font-size: 600%;
-}
 h2 {
-  color: white ;
+  color: #ffffff;
   font-family: verdana;
   font-size: 300%;
 }
+h4 {
+  color: #9d03fc ;
+  font-family: verdana;
+
+}
 
 body {
-  background-color: #282c34;
+  background-image: url(./picture.jpeg);
+  background-color: #ffffff;
+  background-size: cover;
 }
 .App {
+
+  border: round;
+  border-color: #512d6d;
   text-align: center;
   max-width: 728px;
   margin: 0 auto;
@@ -21,13 +26,15 @@ body {
 
 
 .App section {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+
 }
 main {
+
   padding: 10px;
   height: 80vh;
   margin: 10vh 0 10vh;
@@ -49,10 +56,12 @@ main::-webkit-scrollbar-thumb {
 }
 
 form {
+  border-radius: 999px;
+  align-self: flex-end;
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: transparent;
   width: 100%;
   max-width: 728px;
   display: flex;
@@ -61,23 +70,27 @@ form {
 
 form button {
   width: 20%;
-  background-color: green;
+  border-radius: 999px;
 }
 
 
 input {
+border-radius: 999px;
   line-height: 1.5;
   width: 100%;
   font-size: 1.5rem;
-  background: rgb(58, 58, 58);
-  color: white;
+  background: #ffffff;
+  color: black;
   outline: none;
-  border: none;
+  border: round;
+  border-color: #9d03fc;
   padding: 0 10px;
+  ont-family: verdana;
 }
 
 button {
-  background-color: #282c34; /* Green */
+  border-radius: 999px;
+  background-color: #9d03fc; /* Green */
   border: round;
   border-color: white;
   color: white;
@@ -88,7 +101,12 @@ button {
   cursor: pointer;
   font-size: 1.25rem;
 }
-
+button:hover {
+  border: round;
+  border-color: #9d03fc;
+  color: #9d03fc;
+  background-color: white;
+}
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -122,7 +140,7 @@ p {
 }
 
 .message {
-padding: 15px 32px;
+
   display: flex;
   align-items: center;
 }
@@ -136,13 +154,15 @@ padding: 15px 32px;
 
 .sent p {
   color: white;
-  background: #0b93f6;
+  background: #9d03fc;
   align-self: flex-end;
 }
 .received p{
-  background: #e5e5ea;
-  color: black;
+  background: white;
+  color: #9d03fc;
   align-self: flex-end;
+  border: round;
+  border-color: #9d03fc;;
 
 }
 

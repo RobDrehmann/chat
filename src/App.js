@@ -29,15 +29,17 @@ const firestore = firebase.firestore();
 function App() {
   const [user] = useAuthState(auth);
   return (
+
     <div className="App">
+
+
       <header className="App-header">
 
       </header>
-      <h1>Message App</h1>
-      <h2>By: Rob Drehmann</h2>
+      <h2>Message App</h2>
+      <h4>By: Rob Drehmann</h4>
 
       {user ? <ChatRoom />: <SignIn /> }
-
     </div>
   );
 }
@@ -63,7 +65,7 @@ function SignOut() {
 }
 function ChatRoom(){
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt','desc').limit(7);
   const [messages] = useCollectionData(query, {idField: 'id'});
   const [formValue, setFormValue] = useState('');
   const sendMessage = async(e) => {
